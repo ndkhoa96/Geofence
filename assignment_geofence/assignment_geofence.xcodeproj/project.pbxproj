@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E044E9727A11D3C00607D76 /* GeoAreaUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E044E9627A11D3C00607D76 /* GeoAreaUI.swift */; };
+		6E044E9B27A1239400607D76 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E044E9A27A1239400607D76 /* Extension.swift */; };
+		6E044E9F27A1264900607D76 /* TestMove.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 6E044E9E27A1264900607D76 /* TestMove.gpx */; };
+		6E044EA227A242EB00607D76 /* GeofenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E044EA127A242EB00607D76 /* GeofenceTests.swift */; };
 		6EB7566B27A0530C00D14C3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB7566A27A0530C00D14C3E /* AppDelegate.swift */; };
 		6EB7566D27A0530C00D14C3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB7566C27A0530C00D14C3E /* SceneDelegate.swift */; };
 		6EB7567227A0530C00D14C3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EB7567027A0530C00D14C3E /* Main.storyboard */; };
 		6EB7567427A0530F00D14C3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EB7567327A0530F00D14C3E /* Assets.xcassets */; };
 		6EB7567727A0530F00D14C3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EB7567527A0530F00D14C3E /* LaunchScreen.storyboard */; };
-		6EB7568227A0530F00D14C3E /* assignment_geofenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB7568127A0530F00D14C3E /* assignment_geofenceTests.swift */; };
 		6EB7568C27A0530F00D14C3E /* assignment_geofenceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB7568B27A0530F00D14C3E /* assignment_geofenceUITests.swift */; };
 		6EB756A027A05CDC00D14C3E /* GeoAreaEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB7569F27A05CDC00D14C3E /* GeoAreaEntity.swift */; };
 		6EB756A227A0F0D600D14C3E /* DeviceInfoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB756A127A0F0D600D14C3E /* DeviceInfoEntity.swift */; };
@@ -40,6 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E044E9627A11D3C00607D76 /* GeoAreaUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoAreaUI.swift; sourceTree = "<group>"; };
+		6E044E9A27A1239400607D76 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		6E044E9E27A1264900607D76 /* TestMove.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TestMove.gpx; sourceTree = "<group>"; };
+		6E044EA027A128B800607D76 /* HoChiMinh.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = HoChiMinh.gpx; sourceTree = "<group>"; };
+		6E044EA127A242EB00607D76 /* GeofenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceTests.swift; sourceTree = "<group>"; };
 		6EB7566727A0530C00D14C3E /* assignment_geofence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = assignment_geofence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EB7566A27A0530C00D14C3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6EB7566C27A0530C00D14C3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,7 +56,6 @@
 		6EB7567627A0530F00D14C3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6EB7567827A0530F00D14C3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EB7567D27A0530F00D14C3E /* assignment_geofenceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = assignment_geofenceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6EB7568127A0530F00D14C3E /* assignment_geofenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = assignment_geofenceTests.swift; sourceTree = "<group>"; };
 		6EB7568727A0530F00D14C3E /* assignment_geofenceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = assignment_geofenceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EB7568B27A0530F00D14C3E /* assignment_geofenceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = assignment_geofenceUITests.swift; sourceTree = "<group>"; };
 		6EB7569F27A05CDC00D14C3E /* GeoAreaEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoAreaEntity.swift; sourceTree = "<group>"; };
@@ -84,6 +91,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E044E9527A11CCA00607D76 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6E044E9627A11D3C00607D76 /* GeoAreaUI.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		6EB7565E27A0530C00D14C3E = {
 			isa = PBXGroup;
 			children = (
@@ -119,7 +134,7 @@
 		6EB7568027A0530F00D14C3E /* assignment_geofenceTests */ = {
 			isa = PBXGroup;
 			children = (
-				6EB7568127A0530F00D14C3E /* assignment_geofenceTests.swift */,
+				6E044EA127A242EB00607D76 /* GeofenceTests.swift */,
 			);
 			path = assignment_geofenceTests;
 			sourceTree = "<group>";
@@ -144,7 +159,9 @@
 		6EB7569B27A0533900D14C3E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				6E044E9527A11CCA00607D76 /* Models */,
 				6EB756AB27A0F70A00D14C3E /* Scenes */,
+				6E044E9A27A1239400607D76 /* Extension.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -187,6 +204,8 @@
 		6EB756A627A0F34D00D14C3E /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				6E044EA027A128B800607D76 /* HoChiMinh.gpx */,
+				6E044E9E27A1264900607D76 /* TestMove.gpx */,
 				6EB7567327A0530F00D14C3E /* Assets.xcassets */,
 				6EB7567027A0530C00D14C3E /* Main.storyboard */,
 				6EB7567827A0530F00D14C3E /* Info.plist */,
@@ -319,6 +338,7 @@
 				6EB7567727A0530F00D14C3E /* LaunchScreen.storyboard in Resources */,
 				6EB7567427A0530F00D14C3E /* Assets.xcassets in Resources */,
 				6EB7567227A0530C00D14C3E /* Main.storyboard in Resources */,
+				6E044E9F27A1264900607D76 /* TestMove.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,10 +363,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E044E9B27A1239400607D76 /* Extension.swift in Sources */,
 				6EB756A927A0F70400D14C3E /* GeotificationsViewController.swift in Sources */,
 				6EB756A227A0F0D600D14C3E /* DeviceInfoEntity.swift in Sources */,
 				6EB7566B27A0530C00D14C3E /* AppDelegate.swift in Sources */,
 				6EB756AE27A0FD9000D14C3E /* LocationManager.swift in Sources */,
+				6E044E9727A11D3C00607D76 /* GeoAreaUI.swift in Sources */,
 				6EB7566D27A0530C00D14C3E /* SceneDelegate.swift in Sources */,
 				6EB756A427A0F21600D14C3E /* DetectingOutOfArea.swift in Sources */,
 				6EB756A027A05CDC00D14C3E /* GeoAreaEntity.swift in Sources */,
@@ -357,7 +379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EB7568227A0530F00D14C3E /* assignment_geofenceTests.swift in Sources */,
+				6E044EA227A242EB00607D76 /* GeofenceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

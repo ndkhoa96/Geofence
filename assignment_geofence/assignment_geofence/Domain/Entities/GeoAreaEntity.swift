@@ -19,7 +19,11 @@ class GeoAreaEntity {
         self.coordinate = coordinate
     }
     
-    var isConnectedWifi: Bool = false
+    var isWifiConnected: Bool = false
+    
+    func isInsideArea(_ coordinate: Coordinate) -> Bool {
+        region.contains(coordinate.toCoordinator2D()) || isWifiConnected
+    }
 }
 
 struct Coordinate {
@@ -29,16 +33,15 @@ struct Coordinate {
 
 // MARK: - Notification Region
 extension GeoAreaEntity {
-
-  var region: CLCircularRegion {
-    let region = CLCircularRegion(center: coordinate.toCoordinator2D(),
-                                  radius: radius,
-                                  identifier: identifier)
-
-    region.notifyOnEntry = isConnectedWifi
-    region.notifyOnExit = isConnectedWifi == false
-    return region
-  }
+    var region: CLCircularRegion {
+        let region = CLCircularRegion(center: coordinate.toCoordinator2D(),
+                                      radius: radius,
+                                      identifier: identifier)
+        
+        region.notifyOnEntry = isWifiConnected
+        region.notifyOnExit = isWifiConnected == false
+        return region
+    }
 }
 extension Coordinate {
     func toCoordinator2D() -> CLLocationCoordinate2D {
