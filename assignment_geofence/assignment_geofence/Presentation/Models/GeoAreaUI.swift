@@ -7,22 +7,25 @@
 
 import MapKit
 
-class GeoAreaUI: NSObject, MKAnnotation {
-
+final class GeoAreaUI: NSObject, MKAnnotation {
+    let name: String
     let wifiName: String
     let radius: Double
     let coordinate: CLLocationCoordinate2D
-    let identifier: String
     
     var title: String? {
-        return "WifiName: " + wifiName
+        return name
     }
     
-    init(wifiName: String, radius: Double, coordinate: CLLocationCoordinate2D, identifier: String) {
+    var subtitle: String? {
+        return "Wifi: " + wifiName
+    }
+    
+    init(name: String, wifiName: String, radius: Double, coordinate: CLLocationCoordinate2D) {
+        self.name = name
         self.wifiName = wifiName
         self.radius = radius
         self.coordinate = coordinate
-        self.identifier = identifier
     }
     
 }

@@ -7,13 +7,15 @@
 import CoreLocation
 
 class GeoAreaEntity {
+    let name: String
     let wifiName: String
     let radius: Double
     let coordinate: Coordinate
     let identifier: String
     
-    init(identifier: String = UUID().uuidString, wifiName: String, radius: Double, coordinate: Coordinate) {
+    init(identifier: String = UUID().uuidString, name: String, wifiName: String, radius: Double, coordinate: Coordinate) {
         self.identifier = identifier
+        self.name = name
         self.wifiName = wifiName
         self.radius = radius
         self.coordinate = coordinate
@@ -27,8 +29,8 @@ class GeoAreaEntity {
 }
 
 struct Coordinate {
-    let long: Double
     let late: Double
+    let long: Double
 }
 
 // MARK: - Notification Region

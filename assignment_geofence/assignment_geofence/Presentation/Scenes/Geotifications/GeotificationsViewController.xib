@@ -71,6 +71,9 @@
                             <real key="value" value="1"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="addNewGeofication:" destination="-1" eventType="touchUpInside" id="Bvg-Eg-8Mo"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

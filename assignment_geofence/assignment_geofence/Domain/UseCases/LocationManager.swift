@@ -15,7 +15,10 @@ enum AuthorizationStatus {
 }
 
 protocol LocationManagerProtocol {
+    var isMonitoringAvailable: Bool { get }
     func requestAuthorization(_ status: @escaping (AuthorizationStatus) -> Void)
+    func startMonitoring(geotification: GeoAreaEntity)
+    func stopMonitoring(geotification: GeoAreaEntity)
 }
 final class LocationManager: NSObject, LocationManagerProtocol {
     
@@ -32,6 +35,28 @@ final class LocationManager: NSObject, LocationManagerProtocol {
         manager.requestAlwaysAuthorization()
     }
     
+    var isMonitoringAvailable: Bool {
+        return CLLocationManager.isMonitoringAvailable(for: CLCircularRegion.self)
+    }
+    
+    func startMonitoring(geotification: GeoAreaEntity) {
+        if !isMonitoringAvailable {
+            return
+        }
+        
+        let fenceRegion = geotification.region
+        manager.startMonitoring(for: fenceRegion)
+    }
+    
+    func stopMonitoring(geotification: GeoAreaEntity) {
+        for region in manager.monitoredRegions {
+            guard
+                let circularRegion = region as? CLCircularRegion,
+                circularRegion.identifier == geotification.identifier
+            else { continue }
+            manager.stopMonitoring(for: circularRegion)
+        }
+    }
 }
 extension LocationManager: CLLocationManagerDelegate {
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
