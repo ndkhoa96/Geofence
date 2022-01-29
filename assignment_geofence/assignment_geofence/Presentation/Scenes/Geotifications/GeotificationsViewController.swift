@@ -30,6 +30,12 @@ final class GeotificationsViewController: UIViewController {
         initHandling()
         loadAllGeotifications()
         title = titleString + "OFF"
+        locationManager.onEnterGeoArea { [unowned self] entity in
+            entity.isWifiConnected = true
+            title = titleString + entity.wifiName
+            navigationItem.prompt = "Is inside location: \(entity.name)"
+            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Disconnect", style: .plain, target: self, action: <#T##Selector?#>)
+        }
     }
     
     private func initHandling() {
@@ -51,6 +57,7 @@ final class GeotificationsViewController: UIViewController {
                     let geoAreaUI = entity.toGeoAreaUI()
                     mapView.addAnnotation(geoAreaUI)
                     addRadiusOverlay(forGeotification: geoAreaUI)
+                    self.locationManager.startMonitoring(geotification: entity)
                 }
             case .failure(let err):
                 self.showAlert(withTitle: "Error", message: err.localizedDescription)
@@ -136,7 +143,10 @@ extension GeotificationsViewController: MKMapViewDelegate {
     }
 }
 extension GeotificationsViewController: AddGeotificationsViewControllerDelegate {
-    func addGeotificationViewController(_ controller: AddGeotificationViewController) {
-        loadAllGeotifications()
+    func addGeotificationViewController(_ controller: AddGeotificationViewController, _ geoAreaUI: GeoAreaUI) {
+        mapView.addAnnotation(geoAreaUI)
+        addRadiusOverlay(forGeotification: geoAreaUI)
+        locationManager.startMonitoring(geotification: geoAreaUI.toGeoAreaEntity())
     }
+
 }

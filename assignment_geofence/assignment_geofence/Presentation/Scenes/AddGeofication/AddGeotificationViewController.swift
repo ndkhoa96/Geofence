@@ -9,7 +9,7 @@ import UIKit
 import MapKit
 
 protocol AddGeotificationsViewControllerDelegate: AnyObject {
-  func addGeotificationViewController(_ controller: AddGeotificationViewController)
+    func addGeotificationViewController(_ controller: AddGeotificationViewController, _ geoAreaUI: GeoAreaUI)
 }
 class AddGeotificationViewController: UIViewController {
 
@@ -48,13 +48,16 @@ class AddGeotificationViewController: UIViewController {
         let coordinate = Coordinate(late: mapView.centerCoordinate.latitude,
                                     long: mapView.centerCoordinate.longitude)
         let radius = Double(txfRadius.text ?? "") ?? 0
+        
         geoficationUseCase.add(radius: radius,
                                name: txfLocationName.text!,
                                wifiName: txfWifi.text!,
                                coordinate: coordinate) { [unowned self] result in
             switch result {
             case .success(_):
-                delegate?.addGeotificationViewController(self)
+                let geoAreaUI = GeoAreaUI(name: txfLocationName.text!,
+                                          wifiName: txfWifi.text!, radius: radius, coordinate: coordinate.toCoordinator2D())
+                delegate?.addGeotificationViewController(self, geoAreaUI)
                 dismiss(animated: true, completion: nil)
             case .failure(let err):
                 self.showAlert(withTitle: "Error", message: err.localizedDescription)

@@ -21,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dhS-f8-Cag">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                 </mapView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5P-fn-UFx">
                     <rect key="frame" x="344" y="792" width="50" height="50"/>
@@ -82,7 +82,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="u5P-fn-UFx" secondAttribute="trailing" constant="20" id="57f-pP-Gbb"/>
                 <constraint firstAttribute="bottom" secondItem="dhS-f8-Cag" secondAttribute="bottom" id="5gu-FV-FVR"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="yki-4X-9Xr" secondAttribute="bottom" constant="20" id="KkA-Rq-SrW"/>
-                <constraint firstItem="dhS-f8-Cag" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="LKH-5t-Umk"/>
+                <constraint firstItem="dhS-f8-Cag" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="LKH-5t-Umk"/>
                 <constraint firstItem="dhS-f8-Cag" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="acu-60-aUR"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="u5P-fn-UFx" secondAttribute="bottom" constant="20" id="eAA-uT-hXH"/>
                 <constraint firstItem="yki-4X-9Xr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="npH-Sb-Fmj"/>

@@ -40,8 +40,7 @@ extension GeoAreaEntity {
                                       radius: radius,
                                       identifier: identifier)
         
-        region.notifyOnEntry = isWifiConnected
-        region.notifyOnExit = isWifiConnected == false
+        region.notifyOnEntry = true
         return region
     }
 }
