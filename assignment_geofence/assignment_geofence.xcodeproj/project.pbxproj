@@ -10,7 +10,7 @@
 		6E044E9727A11D3C00607D76 /* GeoAreaUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E044E9627A11D3C00607D76 /* GeoAreaUI.swift */; };
 		6E044E9B27A1239400607D76 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E044E9A27A1239400607D76 /* Extension.swift */; };
 		6E044E9F27A1264900607D76 /* TestMove.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 6E044E9E27A1264900607D76 /* TestMove.gpx */; };
-		6E044EA227A242EB00607D76 /* GeofenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E044EA127A242EB00607D76 /* GeofenceTests.swift */; };
+		6E044EA227A242EB00607D76 /* GeofenceLogicTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E044EA127A242EB00607D76 /* GeofenceLogicTest.swift */; };
 		6EB7566B27A0530C00D14C3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB7566A27A0530C00D14C3E /* AppDelegate.swift */; };
 		6EB7566D27A0530C00D14C3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB7566C27A0530C00D14C3E /* SceneDelegate.swift */; };
 		6EB7567227A0530C00D14C3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EB7567027A0530C00D14C3E /* Main.storyboard */; };
@@ -23,6 +23,9 @@
 		6EB756AE27A0FD9000D14C3E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB756AD27A0FD9000D14C3E /* LocationManager.swift */; };
 		6EC1AA6727A28D6900E4589C /* AddGeotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC1AA6527A28D6900E4589C /* AddGeotificationViewController.swift */; };
 		6EC1AA6827A28D6900E4589C /* AddGeotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EC1AA6627A28D6900E4589C /* AddGeotificationViewController.xib */; };
+		6ECD8F0A27A5452D0068C2AC /* GeoAreaEntity+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECD8F0927A5452D0068C2AC /* GeoAreaEntity+Extension.swift */; };
+		6ECD8F1327A54B680068C2AC /* GeoficationRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECD8F1227A54B680068C2AC /* GeoficationRepositoryMock.swift */; };
+		6ECD8F1527A54BF10068C2AC /* GeofenceAreaUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECD8F1427A54BF10068C2AC /* GeofenceAreaUseCaseTests.swift */; };
 		6EE75F4527A2A1BD0062787C /* GeofenceAreaUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE75F4427A2A1BD0062787C /* GeofenceAreaUseCase.swift */; };
 		6EE75F4827A2A7F70062787C /* GeoficationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE75F4727A2A7F70062787C /* GeoficationRepository.swift */; };
 		6EE75F4C27A2AF900062787C /* UserDefaultGeofenceRepositoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE75F4B27A2AF900062787C /* UserDefaultGeofenceRepositoryImp.swift */; };
@@ -53,7 +56,7 @@
 		6E044E9A27A1239400607D76 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		6E044E9E27A1264900607D76 /* TestMove.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TestMove.gpx; sourceTree = "<group>"; };
 		6E044EA027A128B800607D76 /* HoChiMinh.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = HoChiMinh.gpx; sourceTree = "<group>"; };
-		6E044EA127A242EB00607D76 /* GeofenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceTests.swift; sourceTree = "<group>"; };
+		6E044EA127A242EB00607D76 /* GeofenceLogicTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceLogicTest.swift; sourceTree = "<group>"; };
 		6EB7566727A0530C00D14C3E /* assignment_geofence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = assignment_geofence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EB7566A27A0530C00D14C3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6EB7566C27A0530C00D14C3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +73,9 @@
 		6EB756AD27A0FD9000D14C3E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		6EC1AA6527A28D6900E4589C /* AddGeotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGeotificationViewController.swift; sourceTree = "<group>"; };
 		6EC1AA6627A28D6900E4589C /* AddGeotificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddGeotificationViewController.xib; sourceTree = "<group>"; };
+		6ECD8F0927A5452D0068C2AC /* GeoAreaEntity+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GeoAreaEntity+Extension.swift"; sourceTree = "<group>"; };
+		6ECD8F1227A54B680068C2AC /* GeoficationRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoficationRepositoryMock.swift; sourceTree = "<group>"; };
+		6ECD8F1427A54BF10068C2AC /* GeofenceAreaUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceAreaUseCaseTests.swift; sourceTree = "<group>"; };
 		6EE75F4427A2A1BD0062787C /* GeofenceAreaUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceAreaUseCase.swift; sourceTree = "<group>"; };
 		6EE75F4727A2A7F70062787C /* GeoficationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoficationRepository.swift; sourceTree = "<group>"; };
 		6EE75F4B27A2AF900062787C /* UserDefaultGeofenceRepositoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultGeofenceRepositoryImp.swift; sourceTree = "<group>"; };
@@ -146,7 +152,9 @@
 		6EB7568027A0530F00D14C3E /* assignment_geofenceTests */ = {
 			isa = PBXGroup;
 			children = (
-				6E044EA127A242EB00607D76 /* GeofenceTests.swift */,
+				6E044EA127A242EB00607D76 /* GeofenceLogicTest.swift */,
+				6ECD8F1227A54B680068C2AC /* GeoficationRepositoryMock.swift */,
+				6ECD8F1427A54BF10068C2AC /* GeofenceAreaUseCaseTests.swift */,
 			);
 			path = assignment_geofenceTests;
 			sourceTree = "<group>";
@@ -172,6 +180,7 @@
 		6EB7569B27A0533900D14C3E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				6ECD8F0827A5450A0068C2AC /* Extension */,
 				6EE75F5227A3F0720062787C /* Mapping */,
 				6E044E9527A11CCA00607D76 /* Models */,
 				6EB756AB27A0F70A00D14C3E /* Scenes */,
@@ -254,6 +263,14 @@
 				6EC1AA6627A28D6900E4589C /* AddGeotificationViewController.xib */,
 			);
 			path = AddGeofication;
+			sourceTree = "<group>";
+		};
+		6ECD8F0827A5450A0068C2AC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6ECD8F0927A5452D0068C2AC /* GeoAreaEntity+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		6EE75F4627A2A7D20062787C /* Repositories */ = {
@@ -442,6 +459,7 @@
 				6EB7566D27A0530C00D14C3E /* SceneDelegate.swift in Sources */,
 				6EE75F5427A3F0880062787C /* GeoAreaUI+Mapping.swift in Sources */,
 				6EE75F4C27A2AF900062787C /* UserDefaultGeofenceRepositoryImp.swift in Sources */,
+				6ECD8F0A27A5452D0068C2AC /* GeoAreaEntity+Extension.swift in Sources */,
 				6EC1AA6727A28D6900E4589C /* AddGeotificationViewController.swift in Sources */,
 				6EB756A027A05CDC00D14C3E /* GeoAreaEntity.swift in Sources */,
 			);
@@ -451,7 +469,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E044EA227A242EB00607D76 /* GeofenceTests.swift in Sources */,
+				6ECD8F1327A54B680068C2AC /* GeoficationRepositoryMock.swift in Sources */,
+				6ECD8F1527A54BF10068C2AC /* GeofenceAreaUseCaseTests.swift in Sources */,
+				6E044EA227A242EB00607D76 /* GeofenceLogicTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

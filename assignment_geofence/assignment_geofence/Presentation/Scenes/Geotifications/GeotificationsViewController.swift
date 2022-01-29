@@ -15,6 +15,7 @@ final class GeotificationsViewController: UIViewController {
     private let notationIdentifier = "notationIdentifier"
     private let titleString = "Wifi connect: "
     private let geofenceAreaUseCase: GeofenceAreaUseCase
+    private var connectedGeoAreaEntity: GeoAreaEntity?
     
     init(geofenceAreaUseCase: GeofenceAreaUseCase) {
         self.geofenceAreaUseCase = geofenceAreaUseCase
@@ -30,11 +31,26 @@ final class GeotificationsViewController: UIViewController {
         initHandling()
         loadAllGeotifications()
         title = titleString + "OFF"
+        
         locationManager.onEnterGeoArea { [unowned self] entity in
+            if entity.isInsideArea(mapView.userLocation.coordinate.toCoordinate()) {
+                return
+            }
+            connectedGeoAreaEntity = entity
             entity.isWifiConnected = true
             title = titleString + entity.wifiName
             navigationItem.prompt = "Is inside location: \(entity.name)"
-            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Disconnect", style: .plain, target: self, action: <#T##Selector?#>)
+            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Disconnect", style: .plain, target: self, action: #selector(handleDisconnectWifi))
+        }
+    }
+    
+    @objc
+    private func handleDisconnectWifi() {
+        if let geoAreaEntity = connectedGeoAreaEntity {
+            geoAreaEntity.isWifiConnected = false
+            title = titleString + "OFF"
+            navigationItem.prompt = ""
+            connectedGeoAreaEntity = nil
         }
     }
     
@@ -148,5 +164,5 @@ extension GeotificationsViewController: AddGeotificationsViewControllerDelegate 
         addRadiusOverlay(forGeotification: geoAreaUI)
         locationManager.startMonitoring(geotification: geoAreaUI.toGeoAreaEntity())
     }
-
+    
 }

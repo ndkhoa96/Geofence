@@ -8,7 +8,7 @@
 import XCTest
 @testable import assignment_geofence
 
-class GeofenceTest: XCTestCase {
+class GeofenceLogicTest: XCTestCase {
 
     func test_current_location_is_inside_area_geographically() {
         // given

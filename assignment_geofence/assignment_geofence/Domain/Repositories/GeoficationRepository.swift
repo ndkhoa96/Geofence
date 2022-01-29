@@ -8,7 +8,7 @@
 import Foundation
 
 protocol GeoficationRepository {
-    func loadAllGeofication(completion: @escaping (Result<[GeoAreaEntity],Error>) -> Void)
-    func addGeofication(entity: GeoAreaEntity, completion: @escaping (Result<Void,Error>) -> Void)
-    func removeGeofication(with identifier: String, completion: @escaping (Result<Void,Error>) -> Void)
+    func loadAllGeofication(completion: ((Result<[GeoAreaEntity],Error>) -> Void)?)
+    func addGeofication(entity: GeoAreaEntity, completion: ((Result<Void,Error>) -> Void)?)
+    func removeGeofication(with identifier: String, completion: ((Result<Void,Error>) -> Void)?)
 }

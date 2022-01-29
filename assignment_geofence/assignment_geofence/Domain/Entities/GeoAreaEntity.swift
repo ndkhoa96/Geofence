@@ -4,7 +4,7 @@
 //
 //  Created by Khoa Nguyen on 25/01/2022.
 //
-import CoreLocation
+import Foundation
 
 class GeoAreaEntity {
     let name: String
@@ -33,19 +33,3 @@ struct Coordinate {
     let long: Double
 }
 
-// MARK: - Notification Region
-extension GeoAreaEntity {
-    var region: CLCircularRegion {
-        let region = CLCircularRegion(center: coordinate.toCoordinator2D(),
-                                      radius: radius,
-                                      identifier: identifier)
-        
-        region.notifyOnEntry = true
-        return region
-    }
-}
-extension Coordinate {
-    func toCoordinator2D() -> CLLocationCoordinate2D {
-        CLLocationCoordinate2D(latitude: late, longitude: long)
-    }
-}

@@ -17,45 +17,45 @@ final class UserDefaultGeofenceRepositoryImp: GeoficationRepository {
     
     private var geoAreaEntities = [GeoAreaEntity]()
     
-    func loadAllGeofication(completion: @escaping (Result<[GeoAreaEntity], Error>) -> Void) {
+    func loadAllGeofication(completion: ((Result<[GeoAreaEntity], Error>) -> Void)?) {
         guard let savedData = userDefaults.data(forKey: PreferencesKeys.savedItems.rawValue)
         else {
-            completion(.success([]))
+            completion?(.success([]))
             return
         }
         let decoder = JSONDecoder()
         do {
             let savedGeotifications = try decoder.decode(Array.self, from: savedData) as [GeoAreaDataModel]
             geoAreaEntities = savedGeotifications.map({ $0.toGeoAreaEntity() })
-            completion(.success(geoAreaEntities))
+            completion?(.success(geoAreaEntities))
         } catch let err {
-            completion(.failure(err))
+            completion?(.failure(err))
         }
     }
     
-    func addGeofication(entity: GeoAreaEntity, completion: @escaping (Result<Void, Error>) -> Void) {
+    func addGeofication(entity: GeoAreaEntity, completion: ((Result<Void, Error>) -> Void)?) {
         geoAreaEntities.append(entity)
         let models = geoAreaEntities.map({ $0.toGeoAreaDataModel() })
         let encoder = JSONEncoder()
         do {
             let data = try encoder.encode(models)
             userDefaults.set(data, forKey: PreferencesKeys.savedItems.rawValue)
-            completion(.success())
+            completion?(.success())
         } catch let err {
-            completion(.failure(err))
+            completion?(.failure(err))
         }
     }
     
-    func removeGeofication(with identifier: String, completion: @escaping (Result<Void, Error>) -> Void) {
+    func removeGeofication(with identifier: String, completion: ((Result<Void, Error>) -> Void)?) {
         geoAreaEntities.removeAll(where: {$0.identifier == identifier })
         let models = geoAreaEntities.map({ $0.toGeoAreaDataModel() })
         let encoder = JSONEncoder()
         do {
             let data = try encoder.encode(models)
             userDefaults.set(data, forKey: PreferencesKeys.savedItems.rawValue)
-            completion(.success())
+            completion?(.success())
         } catch let err {
-            completion(.failure(err))
+            completion?(.failure(err))
         }
     }
 }

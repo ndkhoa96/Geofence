@@ -6,9 +6,9 @@
 //
 
 protocol GeofenceAreaUseCase {
-    func loadAll(completion: @escaping (Result<[GeoAreaEntity],Error>) -> Void)
-    func add(radius: Double, name: String, wifiName: String, coordinate: Coordinate, completion: @escaping (Result<Void,Error>) -> Void)
-    func remove(with identifier: String, completion: @escaping (Result<Void,Error>) -> Void)
+    func loadAll(completion: ((Result<[GeoAreaEntity],Error>) -> Void)?)
+    func add(radius: Double, name: String, wifiName: String, coordinate: Coordinate, completion: ((Result<Void,Error>) -> Void)?)
+    func remove(with identifier: String, completion: ((Result<Void,Error>) -> Void)?)
 }
 
 final class GeofenceAreaUseCaseImp: GeofenceAreaUseCase {
@@ -19,11 +19,11 @@ final class GeofenceAreaUseCaseImp: GeofenceAreaUseCase {
         self.repo = repo
     }
     
-    func loadAll(completion: @escaping (Result<[GeoAreaEntity], Error>) -> Void) {
+    func loadAll(completion: ((Result<[GeoAreaEntity], Error>) -> Void)?) {
         repo.loadAllGeofication(completion: completion)
     }
     
-    func add(radius: Double, name: String, wifiName: String, coordinate: Coordinate, completion: @escaping (Result<Void, Error>) -> Void) {
+    func add(radius: Double, name: String, wifiName: String, coordinate: Coordinate, completion: ((Result<Void, Error>) -> Void)?) {
         repo.addGeofication(entity: GeoAreaEntity(name: name,
                                                   wifiName: wifiName,
                                                   radius: radius,
@@ -31,7 +31,7 @@ final class GeofenceAreaUseCaseImp: GeofenceAreaUseCase {
                             completion: completion)
     }
     
-    func remove(with identifier: String, completion: @escaping (Result<Void, Error>) -> Void) {
+    func remove(with identifier: String, completion: ((Result<Void, Error>) -> Void)?) {
         repo.removeGeofication(with: identifier, completion: completion)
     }
         

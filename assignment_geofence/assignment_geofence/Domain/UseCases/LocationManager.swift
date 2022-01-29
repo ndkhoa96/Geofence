@@ -7,7 +7,6 @@
 
 import Foundation
 import CoreLocation
-import UIKit
 
 enum AuthorizationStatus {
     case always
@@ -22,6 +21,7 @@ protocol LocationManagerProtocol {
     func stopMonitoring(geotification: GeoAreaEntity)
     func onEnterGeoArea(_ completion: @escaping (GeoAreaEntity) -> Void)
 }
+
 final class LocationManager: NSObject, LocationManagerProtocol {
 
     private let manager = CLLocationManager()
@@ -102,3 +102,4 @@ extension LocationManager: CLLocationManagerDelegate {
         print("Location Manager failed with the following error: \(error)")
     }
 }
+import UIKit
