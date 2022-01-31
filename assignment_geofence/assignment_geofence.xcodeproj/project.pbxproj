@@ -16,7 +16,6 @@
 		6EB7567227A0530C00D14C3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EB7567027A0530C00D14C3E /* Main.storyboard */; };
 		6EB7567427A0530F00D14C3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EB7567327A0530F00D14C3E /* Assets.xcassets */; };
 		6EB7567727A0530F00D14C3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EB7567527A0530F00D14C3E /* LaunchScreen.storyboard */; };
-		6EB7568C27A0530F00D14C3E /* assignment_geofenceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB7568B27A0530F00D14C3E /* assignment_geofenceUITests.swift */; };
 		6EB756A027A05CDC00D14C3E /* GeoAreaEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB7569F27A05CDC00D14C3E /* GeoAreaEntity.swift */; };
 		6EB756A927A0F70400D14C3E /* GeotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB756A727A0F70300D14C3E /* GeotificationsViewController.swift */; };
 		6EB756AA27A0F70400D14C3E /* GeotificationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EB756A827A0F70400D14C3E /* GeotificationsViewController.xib */; };
@@ -42,13 +41,6 @@
 			remoteGlobalIDString = 6EB7566627A0530C00D14C3E;
 			remoteInfo = assignment_geofence;
 		};
-		6EB7568827A0530F00D14C3E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6EB7565F27A0530C00D14C3E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6EB7566627A0530C00D14C3E;
-			remoteInfo = assignment_geofence;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -65,8 +57,6 @@
 		6EB7567627A0530F00D14C3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6EB7567827A0530F00D14C3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EB7567D27A0530F00D14C3E /* assignment_geofenceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = assignment_geofenceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6EB7568727A0530F00D14C3E /* assignment_geofenceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = assignment_geofenceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6EB7568B27A0530F00D14C3E /* assignment_geofenceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = assignment_geofenceUITests.swift; sourceTree = "<group>"; };
 		6EB7569F27A05CDC00D14C3E /* GeoAreaEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoAreaEntity.swift; sourceTree = "<group>"; };
 		6EB756A727A0F70300D14C3E /* GeotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeotificationsViewController.swift; sourceTree = "<group>"; };
 		6EB756A827A0F70400D14C3E /* GeotificationsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeotificationsViewController.xib; sourceTree = "<group>"; };
@@ -99,13 +89,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6EB7568427A0530F00D14C3E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -122,7 +105,6 @@
 			children = (
 				6EB7566927A0530C00D14C3E /* assignment_geofence */,
 				6EB7568027A0530F00D14C3E /* assignment_geofenceTests */,
-				6EB7568A27A0530F00D14C3E /* assignment_geofenceUITests */,
 				6EB7566827A0530C00D14C3E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -132,7 +114,6 @@
 			children = (
 				6EB7566727A0530C00D14C3E /* assignment_geofence.app */,
 				6EB7567D27A0530F00D14C3E /* assignment_geofenceTests.xctest */,
-				6EB7568727A0530F00D14C3E /* assignment_geofenceUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,14 +138,6 @@
 				6ECD8F1427A54BF10068C2AC /* GeofenceAreaUseCaseTests.swift */,
 			);
 			path = assignment_geofenceTests;
-			sourceTree = "<group>";
-		};
-		6EB7568A27A0530F00D14C3E /* assignment_geofenceUITests */ = {
-			isa = PBXGroup;
-			children = (
-				6EB7568B27A0530F00D14C3E /* assignment_geofenceUITests.swift */,
-			);
-			path = assignment_geofenceUITests;
 			sourceTree = "<group>";
 		};
 		6EB7569A27A0532800D14C3E /* Domain */ = {
@@ -351,24 +324,6 @@
 			productReference = 6EB7567D27A0530F00D14C3E /* assignment_geofenceTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		6EB7568627A0530F00D14C3E /* assignment_geofenceUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6EB7569727A0530F00D14C3E /* Build configuration list for PBXNativeTarget "assignment_geofenceUITests" */;
-			buildPhases = (
-				6EB7568327A0530F00D14C3E /* Sources */,
-				6EB7568427A0530F00D14C3E /* Frameworks */,
-				6EB7568527A0530F00D14C3E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6EB7568927A0530F00D14C3E /* PBXTargetDependency */,
-			);
-			name = assignment_geofenceUITests;
-			productName = assignment_geofenceUITests;
-			productReference = 6EB7568727A0530F00D14C3E /* assignment_geofenceUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -383,10 +338,6 @@
 						CreatedOnToolsVersion = 13.0;
 					};
 					6EB7567C27A0530F00D14C3E = {
-						CreatedOnToolsVersion = 13.0;
-						TestTargetID = 6EB7566627A0530C00D14C3E;
-					};
-					6EB7568627A0530F00D14C3E = {
 						CreatedOnToolsVersion = 13.0;
 						TestTargetID = 6EB7566627A0530C00D14C3E;
 					};
@@ -407,7 +358,6 @@
 			targets = (
 				6EB7566627A0530C00D14C3E /* assignment_geofence */,
 				6EB7567C27A0530F00D14C3E /* assignment_geofenceTests */,
-				6EB7568627A0530F00D14C3E /* assignment_geofenceUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -427,13 +377,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		6EB7567B27A0530F00D14C3E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6EB7568527A0530F00D14C3E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -475,14 +418,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6EB7568327A0530F00D14C3E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6EB7568C27A0530F00D14C3E /* assignment_geofenceUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -490,11 +425,6 @@
 			isa = PBXTargetDependency;
 			target = 6EB7566627A0530C00D14C3E /* assignment_geofence */;
 			targetProxy = 6EB7567E27A0530F00D14C3E /* PBXContainerItemProxy */;
-		};
-		6EB7568927A0530F00D14C3E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6EB7566627A0530C00D14C3E /* assignment_geofence */;
-			targetProxy = 6EB7568827A0530F00D14C3E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -640,9 +570,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 329PMA5UHP;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = assignment_geofence/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -671,9 +601,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 329PMA5UHP;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = assignment_geofence/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -744,50 +674,6 @@
 			};
 			name = Release;
 		};
-		6EB7569827A0530F00D14C3E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.khoanguyen.assignment-geofenceUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = assignment_geofence;
-			};
-			name = Debug;
-		};
-		6EB7569927A0530F00D14C3E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.khoanguyen.assignment-geofenceUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = assignment_geofence;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -814,15 +700,6 @@
 			buildConfigurations = (
 				6EB7569527A0530F00D14C3E /* Debug */,
 				6EB7569627A0530F00D14C3E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6EB7569727A0530F00D14C3E /* Build configuration list for PBXNativeTarget "assignment_geofenceUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6EB7569827A0530F00D14C3E /* Debug */,
-				6EB7569927A0530F00D14C3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
