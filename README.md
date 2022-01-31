@@ -4,7 +4,7 @@ The goal of this assignment is to create an iOS application that will detect if 
 
 ### Author: Khoa Nguyen
 
-![alt text](https://github.com/ndkhoa96/Assignment_iOS/blob/main/resources/app_main_screen.png)
+![alt text](https://github.com/ndkhoa96/Assignment_iOS/blob/main/resource/app_main_screen.png)
 
 a/ Project is using:
 
@@ -17,7 +17,7 @@ a/ Project is using:
   - Presentation Layer (MVC) = Views + ViewController
 - SOLID principles [here](https://www.google.com/search?sxsrf=ALeKk01XtOekOpJvhSePYEwrjdVNe2ZNfw%3A1593035218071&ei=0snzXo7VA8i2kwXo66iQAw&q=solid+principles+origin&oq=solid+principles+origi&gs_lcp=CgZwc3ktYWIQAxgAMgIIADoECAAQRzoECAAQQzoGCAAQFhAeOgcIABAUEIcCOggIABAWEAoQHlC6UljoYWCuaGgCcAF4AIABYogBtASSAQE4mAEAoAEBqgEHZ3dzLXdpeg&sclient=psy-ab)
 
-![alt text](https://github.com/ndkhoa96/Assignment_iOS/blob/main/resources/CleanArchitecture.png)
+![alt text](https://github.com/ndkhoa96/Assignment_iOS/blob/main/resource/CleanArchitecture.png)
 
 b/ I have structured the project into 3 main layers:
 
